@@ -1,0 +1,111 @@
+mysql> use project_pets;
+Database changed
+mysql> show tables;
++------------------------+
+| Tables_in_project_pets |
++------------------------+
+| artifacts              |
+| conditions             |
+| defects                |
+| effortcategories       |
+| interruptions          |
+| lifecycles             |
+| plans                  |
+| roles                  |
+| steps                  |
+| tasks                  |
++------------------------+
+10 rows in set (0.06 sec)
+
+mysql> select* from artifacts;
++-------------+---------------+----------------------+
+| artifact_id | artifact_name | artifact_description |
++-------------+---------------+----------------------+
+|           1 | Monika        | Monika 170010_sd     |
+|           2 | Shivaan       | Shivaan_9101         |
+|           3 | Mohit         | Mohit_12 spt         |
++-------------+---------------+----------------------+
+3 rows in set (0.00 sec)
+
+mysql> select* from conditions;
++--------------+----------------+-----------------------+---------------+
+| condition_id | condition_name | condition_description | default_state |
++--------------+----------------+-----------------------+---------------+
+|            1 | kiyaan         | kiyaan bambal_22      | TRUE          |
+|            2 | sonia          | sonia Bambal 18       | TRUE          |
++--------------+----------------+-----------------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> select* from effortcategories;
++-------------------+---------------------+--------------------------------+
+| effortcategory_id | effortcategory_name | effortcategory_description     |
++-------------------+---------------------+--------------------------------+
+|                 1 | Deliverables        | It taks alot of time           |
+|                 2 | testing             | There are so many test cases   |
+|                 3 | Submission          | Submissions should be on time  |
++-------------------+---------------------+--------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> select* from interruptions;
++-----------------+-------------------+----------------------------+
+| interruption_id | interruption_name | interruption_description   |
++-----------------+-------------------+----------------------------+
+|               1 | Exams             | Exams should not be there  |
+|               2 | Food              | I am a foodie              |
++-----------------+-------------------+----------------------------+
+2 rows in set (0.00 sec)
+
+mysql> select* from lifecycles;
++--------------+----------------+-----------------------+
+| lifecycle_id | lifecycle_name | lifecycle_description |
++--------------+----------------+-----------------------+
+|            1 | monika         | monika SD 170010      |
+|            2 | varsha         | Varsha Bambal_22      |
+|            3 | Mohit          | Mohit Bambal_22       |
+|            4 | Kiyaan         | kiyaan Bambal_19      |
+|            5 | No defects     | there is no defect    |
++--------------+----------------+-----------------------+
+5 rows in set (0.00 sec)
+
+mysql> select* from roles;
++---------+-----------+-----------------------------------------------+
+| role_id | role_name | role_description                              |
++---------+-----------+-----------------------------------------------+
+|       1 | Manager   | he/she will handle it perfectly               |
+|       2 | Employee  | Complete the work on time                     |
+|       3 | Intern    | Complete the work on as per the requirements  |
++---------+-----------+-----------------------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> select* from plans;
++---------+-------------+--------------------------------------+
+| plan_id | plan_name   | plan_description                     |
++---------+-------------+--------------------------------------+
+|       1 | Submission  | It will submit on time.              |
+|       2 | Movie       | I have a plan for movie this friday  |
++---------+-------------+--------------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> select* from steps;
++---------+-----------+------------------+
+| step_id | step_name | step_description |
++---------+-----------+------------------+
+|       1 | monika    | monika sd 170010 |
+|       2 | Varsha    | varsha bambal_22 |
+|       3 | mohit     | mohit bambal_12  |
++---------+-----------+------------------+
+3 rows in set (0.00 sec)
+
+mysql> select* from tasks;
++---------+---------------+-----------------------------------------------+-------+----------------+--------------------+
+| task_id | task_name     | task_description                              | roles | used_artifacts | produced_artifacts |
++---------+---------------+-----------------------------------------------+-------+----------------+--------------------+
+|       1 | Deliverables  | we need to submit deliverables on time.       |       |                |                    |
+|       2 | Extensions    | we will get extension ..if there is an issue  |       |                |                    |
++---------+---------------+-----------------------------------------------+-------+----------------+--------------------+
+2 rows in set (0.00 sec)
+
+mysql> select* from defects;
+Empty set (0.00 sec)
+
+mysql> Terminal close -- exit!
